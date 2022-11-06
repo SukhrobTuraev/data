@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>NEWS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header>
+        <div class="nav-left">
+              <h1><a href="{% url 'home' %}">World news</a></h1>
+        </div>
+  </header>
+  {% if user.is_authenticated %}
+     <p>Welcome, {{ user.username }}!</p>
+     <p><a href="{% url 'logout' %}">Exit</a></p>
+  {% else %}
+  <p>
+      <a href="{% url 'login' %}">Sign in</a> |
+      <a href="{% url 'signup' %}">Sign up</a>
+  </p>
+  {% endif %}
+  <div>
+    {% block content %}
+    {% endblock content %}
+  </div>
+  <footer>
+      <a href="{% url 'post_new'%}">Write new post</a>
+  </footer>
+</body>
+</html>
