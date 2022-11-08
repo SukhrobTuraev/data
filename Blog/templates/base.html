@@ -19,7 +19,7 @@
      <p>Welcome, {{ user.username }}!</p>
      <p><a href="{% url 'logout' %}">Exit</a></p>
   {% else %}
-  <p>
+  <p class="post">
       <a href="{% url 'login' %}">Sign in</a> |
       <a href="{% url 'signup' %}">Sign up</a>
   </p>

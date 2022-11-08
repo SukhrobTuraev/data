@@ -4,18 +4,16 @@ header {
     display: flex;
 }
 
-
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18px;
+    text-align: justify;
 }
 
 header h1 a {
     color: ForestGreen;
     text-decoration: none;
 }
-
-
 
 .nav-left {
     margin-right: auto;
@@ -46,4 +44,11 @@ header h1 a {
 }
 .post-entry h2 a:hover {
     color: red;
+}
+
+.post{
+border: 2px solid black;
+background-color: orange;
+display:inline;
+float:right;
 }
