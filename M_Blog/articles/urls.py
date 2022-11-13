@@ -1,4 +1,5 @@
 from django.urls import path
+from .views import SportView, JahonView, info
 from .views import (
     ArticleListView,
     ArticleUpdateView,
@@ -12,4 +13,7 @@ urlpatterns = [
     path('<int:pk>/delete/', ArticleDeleteView.as_view(), name='article_delete'),
     path('new/', ArticleCreateView.as_view(), name='article_new'),
     path('', ArticleListView.as_view(), name='article_list'),
+    path('sport/', SportView, name='sport'),
+    path('info/', info, name='info'),
+    path('jahon/', JahonView, name='jahon'),
 ]

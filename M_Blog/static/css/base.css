@@ -1,0 +1,13 @@
+ #intro {
+      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+}
+a:hover {
+     color: rgba(255, 0, 0, 0.622);
+}
+a:visited {
+    text-decoration: none;
+}

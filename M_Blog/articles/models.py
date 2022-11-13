@@ -4,6 +4,11 @@ from django.urls import reverse
 from ckeditor.fields import RichTextField
 # Create your models here.
 class Article(models.Model):
+    types = (
+        ("Sport", "Sport"),
+        ("Jahon", "Jahon"),
+    )
+    type_new = models.CharField(max_length=10, choices=types)
     title = models.CharField(max_length=150)
     summary = models.CharField(max_length=200, blank=True)
     body = RichTextField()
