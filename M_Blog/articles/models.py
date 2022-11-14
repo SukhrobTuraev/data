@@ -7,8 +7,9 @@ class Article(models.Model):
     types = (
         ("Sport", "Sport"),
         ("Jahon", "Jahon"),
+        ("Fan_texnika", "Fan_texnika"),
     )
-    type_new = models.CharField(max_length=10, choices=types)
+    type_new = models.CharField(max_length=20, choices=types)
     title = models.CharField(max_length=150)
     summary = models.CharField(max_length=200, blank=True)
     body = RichTextField()

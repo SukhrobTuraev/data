@@ -29,6 +29,9 @@ def SportView(request):
 def JahonView(request):
     data = Article.objects.filter(type_new  =  "Jahon")
     return render(request, 'jahon.html', {'data': data})
+def Fan_texnika(request):
+    data = Article.objects.filter(type_new="Fan_texnika")
+    return render(request, 'fan_texnika.html', {'data': data})
 
 class ArticleDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Article
