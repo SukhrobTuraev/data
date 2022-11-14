@@ -1,13 +1,12 @@
- #intro {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-}
-a:hover {
+div h4 a:hover {
      color: rgba(255, 0, 0, 0.622);
 }
-a:visited {
+.card-header a {
     text-decoration: none;
+}
+.card-header a:hover {
+    color: #228B2;
+}
+.navbar navbar-expand-lg navbar-light a:hover {
+    color: rgba(255, 0, 0, 0.622);
 }
