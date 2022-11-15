@@ -7,6 +7,3 @@ div h4 a:hover {
 .card-header a:hover {
     color: #228B2;
 }
-.navbar navbar-expand-lg navbar-light a:hover {
-    color: rgba(255, 0, 0, 0.622);
-}
