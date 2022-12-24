@@ -47,8 +47,12 @@ header h1 a {
 }
 
 .post{
-border: 2px solid black;
-background-color: orange;
-display:inline;
-float:right;
+    /*display:inline;*/
+    float:right;
+}
+ul {
+    display: none;
+}
+.helptext {
+    display: none;
 }

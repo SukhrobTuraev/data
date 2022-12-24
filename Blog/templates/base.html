@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,22 +13,27 @@
         <div class="nav-left">
               <h1><a href="{% url 'home' %}">World news</a></h1>
         </div>
+        <p class="post">
+          <a href="{% url 'login' %}" style="text-decoration: none">Sign in</a> |
+          <a href="{% url 'signup' %}" style="text-decoration: none">Sign up</a>
+        </p>
   </header>
-  {% if user.is_authenticated %}
-     <p>Welcome, {{ user.username }}!</p>
-     <p><a href="{% url 'logout' %}">Exit</a></p>
-  {% else %}
-  <p class="post">
-      <a href="{% url 'login' %}">Sign in</a> |
-      <a href="{% url 'signup' %}">Sign up</a>
-  </p>
-  {% endif %}
+<!--  {% if user.is_authenticated %}-->
+<!--     <p>Welcome, {{ user.username }}!</p>-->
+<!--     <p><a href="{% url 'logout' %}">Exit</a></p>-->
+<!--  {% else %}-->
+<!--  <p class="post">-->
+<!--      <a href="{% url 'login' %}" style="text-decoration: none">Sign in</a> |-->
+<!--      <a href="{% url 'signup' %}" style="text-decoration: none">Sign up</a>-->
+<!--  </p>-->
+<!--  {% endif %}-->
   <div>
     {% block content %}
     {% endblock content %}
   </div>
+  <br>
   <footer>
-      <a href="{% url 'post_new'%}">Write new post</a>
+      <a href="{% url 'post_new'%}" style="text-decoration: none">Write new post</a>
   </footer>
 </body>
 </html>
